@@ -1,0 +1,10 @@
+
+test1.js
+----------------
+test-dependency.js
+test1.js
+
+test2.js
+----------------
+test-dependency.js
+test2.js

@@ -1,0 +1,1 @@
+define([],function(){function e(){}return e.prototype.start=function(){console.log("I start ! ")},e});

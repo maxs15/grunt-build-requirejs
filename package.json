@@ -1,0 +1,25 @@
+{
+  "name": "grunt-build-requirejs",
+  "description": "Use requirejs r.js",
+  "version": "0.4.0rc7",
+  "homepage": "",
+  "author": {
+    "name": "Maxime Mezrahi",
+    "url": "http://github.com/maxs15"
+  },
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "readmeFilename": "README.md",
+  "_id": "grunt-build-requirejs@0.1.0rc7",
+  "_from": "grunt-build-requirejs@0.1.0rc7"
+}
