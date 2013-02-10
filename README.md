@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # grunt-build-requirejs
 
-> Optimize RequireJS projects using r.js and build files.
+> Use r.js to build all the require.js projects of a directorys
 
 
 ## Getting Started
