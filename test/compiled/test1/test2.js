@@ -1,1 +1,0 @@
-define("dependency",[],function(){function e(){}return e.prototype.start=function(){console.log("I start ! ")},e}),define("test2",["dependency"],function(e){e.start(),console.log("ok 2")});

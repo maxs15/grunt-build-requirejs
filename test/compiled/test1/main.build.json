@@ -1,7 +1,0 @@
-{
-    "paths": {
-                "dependency": "test-dependency"
-            },
-
-    "modules": [{"name": "test1"},{"name": "test2"}]
-}
