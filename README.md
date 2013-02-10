@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # grunt-build-requirejs
 
 > Optimize RequireJS projects using r.js and build files.
@@ -64,4 +65,3 @@ requirejs: {
 ## Release History
 
  * 2013-01-22   v0.1.0rc7   Creation of the plugin, work with grunt 0.4.0rc7
----
