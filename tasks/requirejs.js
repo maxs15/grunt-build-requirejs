@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
     var done = this.async();
     var self = this;
-
+    console.log("files = ", this.files);
     this.files.forEach(function(f) {
 
       f.src.filter(function(filepath) {
@@ -44,13 +44,16 @@ module.exports = function(grunt) {
       var baseUrl = path.resolve(f.src[0], "..");
       var dir = path.resolve(f.dest, "..");
       var options = self.options({logLevel: 0, baseUrl: baseUrl, dir: dir});
+      
+      if (path.extname(f.src[0]) == ".json")
+      {
+        var build = grunt.file.readJSON(f.src[0]);
+        options = grunt.util._.merge(build, options);
+      }
+      else
+        options.name = path.basename(f.src[0], '.js');
 
-
-      var build = grunt.file.readJSON(f.src[0]);
-      var fullOptions = grunt.util._.merge(build, options);
-      grunt.verbose.writeflags(options, 'Options');
-
-      requirejs.optimize(fullOptions, function(response) {
+      requirejs.optimize(options, function(response) {
         done();
       });
 
