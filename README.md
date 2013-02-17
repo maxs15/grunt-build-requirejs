@@ -30,6 +30,7 @@ The plugin will look for the build files and compile them into the specified des
 For a full list of possible options, [see the r.js example build file](https://github.com/jrburke/r.js/blob/master/build/example.build.js).
 ### Usage Examples
 
+First possibility: Create a json build file
 ```js
 // path/to/main.build.json
 {
@@ -40,6 +41,9 @@ For a full list of possible options, [see the r.js example build file](https://g
     "modules": [{"name": "test1"},{"name": "test2"}]
 }
 ```
+
+Second possibility: Add a specific extension to identify the files to optimize
+(In this example .build.js)
 
 ```js
 // Gruntfile.js
@@ -52,7 +56,7 @@ requirejs: {
         {
             expand: true,
             cwd: root + components,
-            src: ['**/*.build.json'],
+            src: ['**/*.build.json', '**/*.build.js'],
             dest: root + compiled
         }
     ]
@@ -63,4 +67,5 @@ requirejs: {
 
 ## Release History
 
- * 2013-01-22   v0.1.0rc7   Creation of the plugin, work with grunt 0.4.0rc7
+* 2013-02-17   v0.1.1rc7   Added the possibility to optimize files without .json build file
+* 2013-01-22   v0.1.0rc7   Creation of the plugin, work with grunt 0.4.0rc7
