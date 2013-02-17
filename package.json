@@ -1,20 +1,22 @@
 {
   "name": "grunt-build-requirejs",
   "description": "Use requirejs r.js",
-  "version": "0.4.0rc7",
+  "version": "0.1.1rc7",
   "homepage": "",
   "author": {
     "name": "Maxime Mezrahi",
     "url": "http://github.com/maxs15"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maxs15/grunt-build-requirejs.git"
+  },
   "main": "Gruntfile.js",
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
   "dependencies": {
+    "requirejs": "~2.1.0"
   },
   "keywords": [
     "gruntplugin"
