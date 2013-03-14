@@ -28,7 +28,9 @@ module.exports = function(grunt) {
 
     var done = this.async();
     var self = this;
-    console.log("files = ", this.files);
+    var cpt = 0;
+    var self = this;
+
     this.files.forEach(function(f) {
 
       f.src.filter(function(filepath) {
@@ -54,9 +56,11 @@ module.exports = function(grunt) {
         options.name = path.basename(f.src[0], '.js');
 
       requirejs.optimize(options, function(response) {
-        done();
+        ++cpt;
+        if (cpt >= self.files.length) {
+          done();
+        }
       });
-
     });
 
   });
